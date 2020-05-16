@@ -46,7 +46,8 @@ public class SoWhatIsMockitoTest {
     @Test
     public void shouldReturnAVegetarianMealWithImportStatics() throws Exception {
         //given
-        when(kitchenServiceMock.prepareMeal(startsWith("Vegetarian"), eq(VEGETARIAN_MEAL))).thenReturn(new VegetarianFirstCourse());
+        when(kitchenServiceMock.prepareMeal(startsWith("Vegetarian"), eq(VEGETARIAN_MEAL)))
+                .thenReturn(new VegetarianFirstCourse());
         WaiterImpl objectUnderTest = new WaiterImpl(kitchenServiceMock);
         String mealName = "Vegetarian Hamburger";
 
